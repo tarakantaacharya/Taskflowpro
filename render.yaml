@@ -2,7 +2,7 @@ services:
   - type: web
     name: taskflow-pro
     runtime: static
-    buildCommand: npm ci --include=optional && npm run build
+    buildCommand: rm -f package-lock.json && npm install && npm run build
     staticPublishPath: ./dist
     envVars:
       - key: NODE_VERSION
